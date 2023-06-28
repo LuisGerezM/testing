@@ -7,7 +7,6 @@ import { callEndpoint } from './services';
 import { Box } from '@mui/material';
 
 const LoginForm = () => {
-	// isDirty --> hace referencia a si a tocado o no el formulario
 	const {
 		register,
 		handleSubmit,
@@ -16,7 +15,7 @@ const LoginForm = () => {
 		formState: { errors, isDirty, isValid }
 	} = useForm({
 		defaultValues: { username: '', password: '' },
-		mode: 'onChange', // con onCHange se va a evaluar un error una vez que haya un cambio
+		mode: 'onChange',
 		resolver: yupResolver(LoginFormSchema)
 	});
 
